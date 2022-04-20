@@ -7,11 +7,11 @@ import Slider from "./components/Slider";
 function App() {
   return (
     <>
+      <Toggle />
       <Tab />
+      <Slider />
       <Input />
       <Dropdown />
-      <Toggle />
-      <Slider />
     </>
   );
 }

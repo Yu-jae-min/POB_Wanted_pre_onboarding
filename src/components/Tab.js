@@ -1,5 +1,5 @@
 import React from "react";
-import "./Tab.css";
+import "./Tab.scss";
 
 const Tab = () => {
   return <div id="Tab">Tab</div>;
