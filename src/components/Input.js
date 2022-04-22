@@ -7,7 +7,8 @@ const Input = () => {
   const [invalidShow, setInvalidShow] = useState(false);
 
   const { mail, pw } = inputValue;
-  const emailRegex = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+  const emailRegex =
+    /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
   const emailChecking = emailRegex.test(inputValue.mail);
 
   const addInputValues = (event) => {
@@ -23,13 +24,12 @@ const Input = () => {
   };
 
   const invalidShowHandler = () => {
-    if(mail.length && !emailChecking) setInvalidShow(true);
-  }
+    if (mail.length && !emailChecking) setInvalidShow(true);
+  };
 
   const invalidHideHandler = () => {
-    if(emailChecking) setInvalidShow(false);
-  }
-
+    if (emailChecking) setInvalidShow(false);
+  };
 
   return (
     <div id="Input">
@@ -48,9 +48,9 @@ const Input = () => {
             className="inputIcon"
             name="checkBtn"
             style={{
-              background: emailChecking ?
-              'center / contain no-repeat url(/images/email_check_on.png)' :
-              'center / contain no-repeat url(/images/email_check_off.png)'
+              background: emailChecking
+                ? "center / contain no-repeat url(/images/email_check_on.png)"
+                : "center / contain no-repeat url(/images/email_check_off.png)",
             }}
           />
         </div>
@@ -72,9 +72,9 @@ const Input = () => {
             name="eyeBtn"
             style={{
               cursor: pw.length ? "pointer" : "default",
-              background: btnActive ?
-              'center / contain no-repeat url(/images/pw_show.png)' :
-              'center / contain no-repeat url(/images/pw_hide.png)'
+              background: btnActive
+                ? "center / contain no-repeat url(/images/pw_show.png)"
+                : "center / contain no-repeat url(/images/pw_hide.png)",
             }}
             onClick={pwShowHandler}
             disabled={!pw.length}
